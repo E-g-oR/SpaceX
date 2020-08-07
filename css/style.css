@@ -383,6 +383,9 @@ body {
   .rocket {
     left: 18%;
   }
+  .description {
+    margin-bottom: 250px;
+  }
 }
 @media (max-width: 380px) {
   .rocket {
