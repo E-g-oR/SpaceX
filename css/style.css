@@ -382,6 +382,7 @@ body {
   }
   .rocket {
     left: 18%;
+    top: 20px;
   }
   .description {
     margin-bottom: 250px;
