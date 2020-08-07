@@ -219,8 +219,15 @@ body {
   }
 }
 @media (max-width: 650px) {
+  .video {
+    min-height: 600px;
+  }
+  .description {
+    margin-bottom: 100px;
+  }
   .footer {
     text-align: center;
+    margin-bottom: 100px;
   }
   .footer .footer__nav {
     width: 100%;
@@ -240,6 +247,9 @@ body {
   }
 }
 @media (max-width: 510px) {
+  .video {
+    min-height: 450px;
+  }
   .header .main-menu {
     top: 100px;
     left: 0;
