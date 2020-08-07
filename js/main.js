@@ -5,4 +5,13 @@ var instance = new vidbg(".video", {
   overlay: false // Boolean to display the overlay or not
 });
 var rellax = new Rellax(".rocket");
-
+var MainMenuButton = document.querySelector('.menu-button'),
+    SubMenuButton = document.querySelector('.sub-menu-button'),
+    MainMenu = document.querySelector('.main-menu'),
+    SubMenu = document.querySelector('.sub-menu');
+MainMenuButton.addEventListener('click', () => {
+    MainMenu.classList.toggle('main-menu_active');
+});
+SubMenuButton.addEventListener('click', () => {
+    SubMenu.classList.toggle('sub-menu_active');
+});

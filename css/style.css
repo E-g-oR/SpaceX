@@ -28,6 +28,64 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+.menu-button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.menu-button_line {
+  margin: 0 auto;
+  display: block;
+  width: 25px;
+  height: 1px;
+  background-color: #fff;
+  position: relative;
+}
+.menu-button_line::before,
+.menu-button_line::after,
+.sub-menu-button::before,
+.sub-menu-button::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 5px;
+}
+.menu-button_line::before {
+  transform: translateY(-7px);
+}
+.menu-button_line::after {
+  transform: translateY(7px);
+}
+.sub-menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.sub-menu-button::before,
+.sub-menu-button::after {
+  top: 50%;
+  width: 17px;
+}
+.sub-menu-button::before {
+  transform: translateX(-37%) rotate(40deg);
+}
+.sub-menu-button::after {
+  transform: translateX(37%) rotate(-40deg);
+}
 .menu-list {
   display: flex;
 }
@@ -250,12 +308,35 @@ body {
   .video {
     min-height: 450px;
   }
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0px 0 10 0;
+    z-index: 9999;
+    backdrop-filter: blur(50px) saturate(180%);
+    
+  }
+  .header .logo {
+    position: absolute;
+    margin-top: 20px;
+  }
   .header .main-menu {
     top: 100px;
     left: 0;
     width: 100%;
-    margin: 20px 0;
+    margin: 55px 0 0 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    max-height: 0;
+    transition: 0.4s;
+    width: 90%;
     /* background-color: #202020; */
+  }
+  .header .main-menu.main-menu_active {
+    transform: scaleY(1);
+    max-height: 500px;
+    margin-bottom: 20px;
   }
   .sub-menu {
     width: 100%;
@@ -264,7 +345,18 @@ body {
     display: flex;
     justify-content: center;
     border: 1px solid;
+    transform: scaleY(0);
+    transform-origin: top;
+    max-height: 0px;
     border-radius: 4px;
+    transition: 0.4s;
+    margin-bottom: 0;
+    width: 90%;
+  }
+  .sub-menu.sub-menu_active {
+    transform: scaleY(1);
+    max-height: 500px;
+    margin-bottom: 20px;
   }
   .header .main-menu .menu-list {
     flex-direction: column;
