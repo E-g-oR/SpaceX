@@ -97,10 +97,10 @@ body {
   height: 0;
 }
 .sub-menu-button.sub-menu_active::before {
-  transform: translateX(-37%) rotate(-40deg);
+  transform: translateX(37%) rotate(40deg);
 }
 .sub-menu-button.sub-menu_active::after {
-  transform: translateX(-37%) rotate(40deg);
+  transform: translateX(-37%) rotate(-40deg);
 }
 .menu-button.main-menu_active .menu-button_line::before {
   transform: rotate(45deg);
